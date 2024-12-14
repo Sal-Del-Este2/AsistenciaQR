@@ -30,9 +30,6 @@ export class LoginComponent  implements OnInit {
     private animationCtrl: AnimationController
   ) { }
 
-  ngOnInit() {
-  }
-
   // Función para animar el botón
   vibrateButton() {
     if (this.forgotPasswordButton) {
@@ -57,6 +54,9 @@ export class LoginComponent  implements OnInit {
     } else {
       console.error('No se encontró el botón con la clase .forgot-password-button');
     }
+  }
+
+  ngOnInit() {
   }
 
   async login() {
