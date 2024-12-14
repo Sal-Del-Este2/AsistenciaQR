@@ -1,4 +1,5 @@
-<ion-content [fullscreen]="true" id="main-content">
+<ion-content [fullscreen]="true">
+  <ion-img class="imagen2" *ngIf="pokemonImage" [src]="pokemonImage"></ion-img>
   <div class="icon-container">
     <!-- <ion-icon name="person" class="bottom-icon" (click)="presentPopover($event)"></ion-icon> ícono para abrir el popover -->
      <!-- <ion-icon name="person" class="bottom-icon"></ion-icon> -->

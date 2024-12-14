@@ -1,0 +1,26 @@
+usados
+
+generar QR:
+npm install ng-qrcode --save
+npm i html2canvas
+
+npm install @capacitor/filesystem
+para compartir o descargar
+npm install @capacitor/share
+
+
+npm install @capacitor/android
+npx cap add android
+npm install @capacitor/ios
+npx cap add ios
+
+escanear QR:
+npm install @capacitor-mlkit/barcode-scanning@next
+
+
+npm install firebase @angular/fire
+
+ionic g page inicio
+ionic g service services/auth 
+ionic g component components/login
+ionic g guard auth/auth
