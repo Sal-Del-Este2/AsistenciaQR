@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true" id="main-content">
+  <ion-img *ngIf="showGif" class="pokemon-gif" src="assets/guardarPokemon.gif"></ion-img>
+  <ion-img class="imagen2" *ngIf="pokemonImage" [src]="pokemonImage"></ion-img>
+
+  <div class="icon-container">
+  </div>
+  
+  <!-- inicio de sesión y botones de acción -->
+  <div class="home-section ion-padding">
+
+    <div class="heading ">
+      <h1>Bienvenido Administrador</h1>
+
+    </div>
+
+    <!-- opciones -->
+    <div class="action-button ion-padding"> <!-- se emparejan los botones -->
+      <ion-button size="#" class="custom-small-button" [routerLink]="'/construccion'">Horario</ion-button>
+      <ion-button size="#" class="custom-small-button" [routerLink]="'/saber-asistencia'">Asistencia</ion-button>
+    </div>
+
+    <div class="action-button ion-padding"> <!-- se emparejan los botones -->
+      <ion-button size="#" class="custom-small-button" [routerLink]="'/asistencia'">Asistencia QR</ion-button>
+      <ion-button size="#" class="custom-small-button" [routerLink]="'/construccion'">Cursos</ion-button>
+    </div>
+
+    <div class="heading">
+      <p>Gestiona las asistencias</p>
+      <ion-button fill="clear" size="small" class="forgot-password-button" (click)="clearAsistencias()">Reiniciar las Asistencias</ion-button>
+    </div>
+  </div>
+  
+</ion-content>
+
+<ion-footer>
+  <div class="action-button ion-padding">
+    <ion-button size="#" class="custom-medium-button" (click)="logout() ">Cerrar sesión</ion-button>
+  </div>
+</ion-footer>
