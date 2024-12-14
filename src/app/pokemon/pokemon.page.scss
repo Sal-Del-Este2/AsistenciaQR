@@ -1,0 +1,83 @@
+// estilo contenido principal
+ion-content {
+    --background: linear-gradient(0deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.1)),
+    url('/assets/inicio.png') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; // elementos alineados en la parte inferior
+    align-items: center; // Centrar horizontalmente
+
+}
+  
+// estilo seccion donde estara el contenido
+.home-section {
+  height: 74vh;
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  border-top-right-radius: 26px;
+  border-top-left-radius: 26px;
+}
+
+// estilo del encabezado
+.heading {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: #000;
+}
+
+.heading p {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #7b7b7b;
+}
+.heading ion-txt {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #7b7b7b;
+}
+
+// estilo para el contenedor del ícono
+.icon-container {
+  display: flex;
+  justify-content: center; // ícono centrado horizontalmente 
+  width: 100%; // ancho completo
+  margin-top: 130px; //este abjadodel titulo de l aimagen
+  position: relative; //sobre todo
+}
+
+// Estilo del icono
+.bottom-icon {
+  color: #fff;
+  font-size: 42px;
+  width: 45px;
+  height: 40px;
+}
+
+// estilo de los botones
+.action-button {
+  display: flex;
+  justify-content: space-between; // alinea los botones en los extremos
+  width: 100%; // la fila de botones ocupe todo el ancho disponible
+  max-width: 600px; //Limita el ancho máximo de la fila de botones
+}
+
+.action-button ion-button {
+  flex: 1;
+  margin: 0 10px; // Espaciado entre botones
+  --box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.692); // Sombra del botón
+}
+  
+.custom-small-button { //altura, ancho y tamaño fuente
+    height: 50px;
+    width: 30px;
+    font-size: 15px;
+}

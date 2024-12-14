@@ -1,13 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" id="main-content">
+  <ion-img *ngIf="showGif" class="pokemon-gif" src="assets/guardarPokemon.gif"></ion-img>
+  <ion-img class="imagen2" *ngIf="pokemonImage" [src]="pokemonImage"></ion-img>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">inicio</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="icon-container">
+    <!-- <ion-icon name="person" class="bottom-icon" (click)="presentPopover($event)"></ion-icon> ícono para abrir el popover -->
+     <!-- <ion-icon name="person" class="bottom-icon"></ion-icon> -->
+  </div>
+  
+  <!-- inicio de sesión y botones de acción -->
+  <div class="home-section ion-padding">
+
+    <div class="heading ">
+      <h1>Bienvenido a Duoc</h1>
+      <p *ngIf="userEmail">Estudiante: {{ userEmail }}</p><!-- mostrara el nombre de usuario iniciado -->
+    </div>
+
+    <!-- opciones -->
+    <div class="action-button ion-padding"> <!-- se emparejan los botones -->
+      
+      <ion-button size="#" class="custom-small-button" [routerLink]="'/asistencia'">Escaner para asistencia</ion-button>
+      <ion-button size="#" class="custom-small-button" [routerLink]="'/saber-asistencia'">Visor de asistencia</ion-button>
+    </div>
+
+    <!-- <div class="action-button ion-padding"> -- se emparejan los botones --
+      <ion-button size="#" class="custom-small-button" [routerLink]="'/construccion'">Horario</ion-button>
+      <ion-button size="#" class="custom-small-button" [routerLink]="'/construccion'">Cursos</ion-button>
+    </div> -->
+    <div class=""> <!-- se emparejan los botones -->
+      <ion-button fill="clear" size="small" #forgotPasswordButton class="forgot-password-button" [routerLink]="'/pokemon'">Selecciona un pokémon para tu sesión</ion-button>
+    </div>
+    <!-- Nuevo botón para borrar la imagen del Pokémon -->
+    <div class="heading">
+      <p>Guarda tu pokémon</p>
+      <ion-button fill="clear" size="small" class="forgot-password-button" (click)="clearPokemonImage()">Atrapa a tu Pokémon</ion-button>
+    </div>
+  </div>
+  
 </ion-content>
+
+<ion-footer>
+  <div class="action-button ion-padding">
+    <ion-button size="#" class="custom-medium-button" (click)="logout() ">Cerrar sesión</ion-button>
+  </div>
+</ion-footer>

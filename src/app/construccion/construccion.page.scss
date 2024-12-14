@@ -1,0 +1,91 @@
+// estilo contenido principal
+ion-content {
+    --background: linear-gradient(0deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.1)),
+    url('/assets/inicio.png') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; // elementos alineados en la parte inferior
+    align-items: center; // Centrar horizontalmente
+  }
+  
+  // estilo seccion donde estara el contenido
+  .home-section {
+    height: 74vh;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    border-top-right-radius: 26px;
+    border-top-left-radius: 26px;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center; // Centrar horizontal dentro del contenedor
+    width: 100%; // el contenedor ocupe el ancho completo
+    padding: 50px; // espacio alrededor del ícono
+  }
+  // estilo del boton
+  .ion-boton {
+    display: flex;
+    justify-content: center; // Centrar horizontal dentro del contenedor
+    width: 100%; // Asegura que el contenedor ocupe el ancho completo
+  }
+  
+  .bottom-icon { //icono: color, tamaño, ancho y alto
+    color: #6173c4;
+    font-size: 42px;
+    width: 45px;
+    height: 40px;
+  }
+    
+  .ion-title { // título alineado al centro horizontalmente
+      display: flex;
+      justify-content: center;
+      width: 100%;
+  }
+    
+  .bottom-icon { // icono color, tamaño, 
+    color: #020202; /* Color del icono */
+    font-size: 42px; /* Tamaño del icono */
+    width: 45px; /* Ancho del icono */
+    height: 40px; /* Alto del icono */
+    display: block; /* Permite el centrado con margin */
+    margin: 50px auto 0 auto; /* 50px de margen superior y auto a los lados para centrar horizontalmente */
+  }
+    
+  .imagenes { // posición la imagen ladrillo
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; //alineados an la base de cada imagen
+      height: 30vh; // limita la altura
+  }
+    
+  .ion-gift { // posición la imagen minero
+      position: absolute;
+      z-index: 1; //se muestre sobre los ladrillos
+      bottom: 0; // lugar inferir
+      left: 50%;
+      transform: translateX(-50%); //centrar el minero en el contenedor
+      transition: left 2s ease; //trancicion suave
+  }
+    
+  .ion-ladrillos {
+      display: flex;
+      position: relative; // se alineen en una fila dentro del contenedor
+  }
+    
+  .ion-ladrillo { //detalle ladrillo: ancho, altura, margen
+      width: 100px;
+      height: auto;
+      margin-right: 5px;
+      transition: opacity 0.5s ease; // transición suave de los ladrillos, para efectos de desvanecimiento
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: #000;
+  }

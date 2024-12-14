@@ -1,0 +1,45 @@
+// estilo contenido principal
+ion-content {
+    --background: linear-gradient(0deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.1)),
+    url('/assets/inicio.png') no-repeat center center / cover;
+  }
+  // estilo seccion donde estara el contenido
+  .login-section {
+    height: 74vh;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    bottom: 0;
+    position: fixed;
+    margin: auto;
+    border-top-right-radius: 26px;
+    border-top-left-radius: 26px;
+  }
+  // Estilos para el encabezado
+  .heading {
+    margin-top: 2px;
+    text-align: center;
+  }
+  
+  .heading h1 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: #000000;
+  }
+  
+  .heading p {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #7b7b7b;
+  }
+  
+  // Estilos para el botón: altura, largo, tamaño letra
+  .custom-small-button {
+    height: 20px;
+    width: 90px;
+    font-size: 12px; 
+  }
+  // Estilos para los botones de acciones
+  .action-button {
+    text-align: center;
+  }

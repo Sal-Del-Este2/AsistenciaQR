@@ -1,13 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>asistencia</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">asistencia</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-img class="imagen2" *ngIf="pokemonImage" [src]="pokemonImage"></ion-img>
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1>Seleccione su clase</h1>
+    </div>
+
+    <!-- Contenedor para los botones alineados horizontalmente -->
+
+    <div class="action-button ion-padding">
+      <ion-button size="#" class="custom-small-button" (click)="navigateEscanner('Clase 1')">Clase 1</ion-button> <!-- sitio en construcción -->
+    </div>
+    <div class="action-button ion-padding">
+      <ion-button size="#" class="custom-small-button" (click)="navigateEscanner('Clase 2')">Clase 2</ion-button> <!-- sitio en construcción -->
+    </div>
+  </div>
 </ion-content>
+<ion-footer>
+  <div class="action-button ion-padding">
+    <ion-button size="#" class="custom-medium-button" (click)="navigateHome()">Inicio</ion-button>
+  </div>
+</ion-footer>

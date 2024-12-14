@@ -1,3 +1,45 @@
-<p>
-  login works!
-</p>
+<!-- formulario inicio sesion -->
+<form (ngSubmit)="login()" class="login-form ion-padding"> 
+
+  <!-- ingresar correo -->
+  <div class="form-input">
+    <ion-icon name="mail-outline"></ion-icon>
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="email" aria-label="email" name="email" [(ngModel)]="email"></ion-input> <!-- Añadido el atributo name -->
+    </ion-item>
+  </div>
+  <br>
+  <!-- ingresar contraseña -->
+  <div class="form-input">
+    <ion-icon name="lock-closed-outline"></ion-icon>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" aria-label="password" name="password" [(ngModel)]="password"></ion-input> <!-- Añadido el atributo name -->
+    </ion-item>
+  </div>
+  
+  <!-- mensaje de error si errorMessage tiene un valor -->
+  <div *ngIf="errorMessage" class="error-message">
+    <p size="small">{{ errorMessage }}</p>
+  </div>
+  
+  <!-- mensaje de registro si registroMessage tiene un valor -->
+  <div *ngIf="registroMessage" class="error-message">
+    <p size="small">{{ registroMessage }}</p>
+  </div>
+
+</form> <!-- fin formulario -->
+
+<!-- boton ingresar a cuenta-->
+<div class="action-button ion-padding"> 
+  <ion-button size="#" class="custom-small-button" (click)="login() ">Ingresar</ion-button>
+  <br>
+  
+  <!-- ingresa a pagina para recuperar contraseña-->
+  <p> 
+    <ion-button fill="clear" size="small" class="registro" [routerLink]="'/registro'">Registrese</ion-button>
+    <br>
+    <ion-button fill="clear" size="small" #forgotPasswordButton class="forgot-password-button" [routerLink]="'/recordar-cuenta'">¿Olvidó su contraseña?</ion-button>
+  </p>
+</div>

@@ -35,3 +35,20 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+ion-app {
+    --ion-color-primary: #3880ff;
+    --ion-color-secondary: #0cd1e8;
+    --ion-color-tertiary: #7044ff;
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000; // Texto negro
+    --ion-item-background: #ffffff;
+    --ion-toolbar-background: #f8f8f8;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    ion-app {
+      --ion-background-color: #121212;
+      --ion-text-color: #ffffff;
+    }
+  }

@@ -1,13 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>construccion</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">construccion</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" id="main-content">
+  <ion-img class="imagen2" *ngIf="pokemonImage" [src]="pokemonImage"></ion-img>
+  <div class="icon-container">
+    <div class="home-section ion-padding">
+      <div class="ion-title">
+        <h3>Sitio aún en construcción</h3>
+      </div>
+      <div class="imagenes">
+        <div class="ion-gift">
+          <ion-img alt="Minero gift" src="assets/Minero.gif"></ion-img>
+        </div>
+        <div class="ion-ladrillos">
+          <div *ngFor="let ladrillo of ladrillos" class="ion-ladrillo">
+            <ion-img alt="muralla de ladrillo" [src]="ladrillo.src"></ion-img>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
 </ion-content>
+<ion-footer>
+  <div class="action-button ion-padding">
+    <ion-button size="#" class="custom-medium-button" (click)="navigateHome()">Inicio</ion-button>
+  </div>
+</ion-footer>

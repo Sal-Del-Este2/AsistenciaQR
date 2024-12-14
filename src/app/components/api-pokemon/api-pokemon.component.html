@@ -1,3 +1,28 @@
-<p>
-  api-pokemon works!
-</p>
+<div class="ion-text-center">
+  <p class="texto">tu pokemon de sesión: </p>
+  <ion-item>
+      <ion-input class="texto" label="" type="text" [(ngModel)]="idOrName" name="idOrName">
+      </ion-input>
+      <ion-button [disabled]="!idOrName" (click)="getPokemon()">
+          <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+  </ion-item>
+
+  <!-- Mostrar el GIF mientras se busca el Pokémon -->
+  <ion-card *ngIf="showGif" >
+      <ion-img src="assets/seleccionPokemon.gif" class="imagen"></ion-img>
+  </ion-card>
+
+  <ion-card >
+      Nombre: {{pokemon.name}}, ID: {{pokemon.id}}
+  </ion-card>
+
+  <ion-card *ngIf="pokemon" >
+      <ion-img [src]="pokemon.sprites.front_default" class="imagen"></ion-img>
+  </ion-card>
+
+  <div class="ion-padding">
+      <ion-button fill="" size="small"  class="registro" (click)="navigateInicio()">cerrar</ion-button>
+  </div>
+
+</div>

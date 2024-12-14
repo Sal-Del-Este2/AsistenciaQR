@@ -1,0 +1,89 @@
+ion-content {
+    // fondo con degradado y centrado
+    --background: linear-gradient(0deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.1)),
+    url('/assets/inicio.png') no-repeat center center / cover;
+    // botones en columna, alineados al final y centrados horizontalmente
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  // altura y el ancho del login
+  .login-section {
+    height: 74vh;
+    max-width: 500px;
+    background: #fff; // Establece el fondo blanco y posiciona la sección del contenido en la parte inferior y centrada
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-top-right-radius: 26px; // bordes redondeados en la parte superior de la misma seccion
+    border-top-left-radius: 26px;
+  }
+  
+  // Margen superior y alineación centrada para el encabezado
+  .heading {
+    margin-top: 5px;
+    text-align: center;
+  }
+  // Tamaño de fuente, grosor y color para el título del H1
+  .heading h1 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: #000000;
+  }
+
+  // botones alineados con espacio
+  .action-button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+  }
+  // Estilo del botone para usar mismo espacio y con sombra
+  .action-button ion-button {
+    flex: 1;
+    margin: 0 10px;
+    --box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.692);
+    height: 50px; // Altura, tamaño de fuente y animación del boton
+    font-size: 15px;
+    opacity: 0; // boton con animacion, invisibles al inicio
+    animation: fadeIn 0.5s ease-in-out forwards; //anima la aparición
+    animation-delay: var(--animation-delay);
+  }
+
+  .action-button2 {
+    width: 100%;
+    max-width: 500px;  /* Ajusta el ancho máximo según lo que necesites */
+    margin: 0 auto;  /* Centra el card */
+    text-align: center
+  }
+
+  ion-progress-bar {
+    width: 95%; /* Ajusta este valor según el ancho que desees */
+    margin: 0 auto; /* Centra la barra dentro del ion-card */
+    --progress-background: #807d7d; /* Color de fondo de la barra */
+    --progress-bar-color: #6173c4; /* Color de la barra de progreso */
+    height: 20px; /* Aumenta la altura de la barra */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  // animacion de botones
+  @keyframes fadeIn {
+    from {
+      opacity: 0; // Comienza invisible y se desplaza hacia abajo
+      transform: translateY(40px);
+    }
+    to { // Termina visible y en su posición original
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+.imagen {
+  width: 30%; /* Ajusta el tamaño según sea necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 0; /* Elimina los márgenes externos */
+  padding: 0; /* Elimina los márgenes internos */
+}

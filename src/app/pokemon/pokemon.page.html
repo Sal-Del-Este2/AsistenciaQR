@@ -1,13 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>pokemon</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" id="main-content">
+  <div class="icon-container">
+    <!-- <ion-icon name="person" class="bottom-icon" (click)="presentPopover($event)"></ion-icon> ícono para abrir el popover -->
+     <!-- <ion-icon name="person" class="bottom-icon"></ion-icon> -->
+  </div>
+  
+  <!-- inicio de sesión y botones de acción -->
+  <div class="home-section ion-padding">
+    <div class="heading ">
+    <h1>Selecciona a tu pokémon</h1>
+    <p>Selecciona tu pokémon por el "Nombre" o un "Número de ID"</p>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pokemon</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <!-- opciones -->
+  <div class="action-button ion-padding"> <!-- se emparejan los botones -->
+    <app-api-pokemon></app-api-pokemon>
+  </div>
+</div>

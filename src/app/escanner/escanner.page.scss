@@ -1,0 +1,85 @@
+ion-content {
+    --background: linear-gradient(0deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.1)),
+    url('/assets/inicio.png') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; // elementos alineados en la parte inferior
+    align-items: center; // Centrar horizontalmente
+}
+
+  // estilo seccion donde estara el contenido
+.home-section {
+    height: 74vh;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    border-top-right-radius: 26px;
+    border-top-left-radius: 26px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center; // Centrar horizontal dentro del contenedor
+    width: 100%; // el contenedor ocupe el ancho completo
+    padding: 50px; // espacio alrededor del ícono
+}
+  // estilo del boton
+.ion-boton {
+    display: flex;
+    justify-content: center; // Centrar horizontal dentro del contenedor
+    width: 100%; // Asegura que el contenedor ocupe el ancho completo
+}
+  
+.bottom-icon { //icono: color, tamaño, ancho y alto
+    color: #6173c4;
+    font-size: 42px;
+    width: 45px;
+    height: 40px;
+}
+.action-button {
+  display: flex;
+  justify-content: space-between; // alinea los botones en los extremos
+  width: 100%; // la fila de botones ocupe todo el ancho disponible
+  max-width: 600px; //Limita el ancho máximo de la fila de botones
+}
+.submit{
+  height: 44px;
+  justify-content: center;
+  --border-radius: 10px;
+}
+
+.action-button ion-button {
+  flex: 1;
+  margin: 0 10px; // Espaciado entre botones
+  --box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.692); // Sombra del botón
+}
+.custom-small-button { //altura, ancho y tamaño fuente
+  height: 50px;
+  width: 30px;
+  font-size: 15px;
+}
+.result{
+  color: black;
+  border: 1px dashed var(--ion-color-medium);
+  border-radius: 10px;
+  margin: 30px 0;
+
+  p{
+    color: var(--ion-color-tertiary);
+    margin-bottom: 5px;
+    font-size: 11px;
+  }
+
+  h6{
+    margin-top: 0;
+  }
+}
+
+.imagen2 {
+  margin: 0; /* Elimina los márgenes externos */
+  padding: 0; /* Elimina los márgenes internos */
+  border: none; /* Elimina cualquier borde */
+}

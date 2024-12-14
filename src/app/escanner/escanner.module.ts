@@ -8,13 +8,17 @@ import { EscannerPageRoutingModule } from './escanner-routing.module';
 
 import { EscannerPage } from './escanner.page';
 
+import { QrCodeModule } from 'ng-qrcode';
+import { BarcodeScanningModalComponent } from './barcode-scanning-modal.component';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EscannerPageRoutingModule
+    EscannerPageRoutingModule,
+    QrCodeModule
   ],
-  declarations: [EscannerPage]
+  declarations: [EscannerPage, BarcodeScanningModalComponent]
 })
 export class EscannerPageModule {}

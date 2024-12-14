@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { adminGuard, authGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,31 +14,38 @@ const routes: Routes = [
   },
   {
     path: 'administrador',
-    loadChildren: () => import('./administrador/administrador.module').then( m => m.AdministradorPageModule)
+    loadChildren: () => import('./administrador/administrador.module').then( m => m.AdministradorPageModule), // Solo accesible para el administrador
+    canActivate:[adminGuard]
   },
   {
     path: 'asistencia',
-    loadChildren: () => import('./asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
+    loadChildren: () => import('./asistencia/asistencia.module').then( m => m.AsistenciaPageModule),
+    canActivate:[authGuard]
   },
   {
     path: 'construccion',
-    loadChildren: () => import('./construccion/construccion.module').then( m => m.ConstruccionPageModule)
+    loadChildren: () => import('./construccion/construccion.module').then( m => m.ConstruccionPageModule),
+    canActivate:[authGuard]
   },
   {
     path: 'escanner',
-    loadChildren: () => import('./escanner/escanner.module').then( m => m.EscannerPageModule)
+    loadChildren: () => import('./escanner/escanner.module').then( m => m.EscannerPageModule),
+    canActivate:[authGuard]
   },
   {
     path: 'inicio',
-    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule),
+    canActivate:[authGuard]
   },
   {
     path: 'pokemon',
-    loadChildren: () => import('./pokemon/pokemon.module').then( m => m.PokemonPageModule)
+    loadChildren: () => import('./pokemon/pokemon.module').then( m => m.PokemonPageModule),
+    canActivate:[authGuard]
   },
   {
     path: 'progreso',
-    loadChildren: () => import('./progreso/progreso.module').then( m => m.ProgresoPageModule)
+    loadChildren: () => import('./progreso/progreso.module').then( m => m.ProgresoPageModule),
+    canActivate:[authGuard]
   },
   {
     path: 'recordar-cuenta',
@@ -49,7 +57,8 @@ const routes: Routes = [
   },
   {
     path: 'saber-asistencia',
-    loadChildren: () => import('./saber-asistencia/saber-asistencia.module').then( m => m.SaberAsistenciaPageModule)
+    loadChildren: () => import('./saber-asistencia/saber-asistencia.module').then( m => m.SaberAsistenciaPageModule),
+    canActivate:[authGuard]
   },
 ];
 

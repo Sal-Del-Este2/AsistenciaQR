@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }
+import { Router } from '@angular/router';
+import { AuthService } from '../service/auth.service';
+import { AnimationController } from '@ionic/angular';
 
 @Component({
   selector: 'app-administrador',

@@ -1,0 +1,111 @@
+/* Estilo para el contenedor principal de la página */
+ion-content {
+    --background: linear-gradient(0deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.1)),
+    url('/assets/inicio.png') no-repeat center center / cover;
+}
+
+/* Estilo para la sección de login que se encuentra centrada en la pantalla */
+.login-section {
+    height: 74vh; /* Altura de la sección de login */
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed; /* Fijo para mantenerlo en la parte inferior */
+    margin: auto;
+    border-top-right-radius: 26px;
+    border-top-left-radius: 26px;
+}
+
+/* Estilo para el encabezado dentro de la sección de login */
+.heading {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilo para el título dentro del encabezado */
+.heading h1 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: #000000;
+}
+
+/* Estilo para el párrafo dentro del encabezado */
+.heading p {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #7b7b7b;
+}
+
+/* Estilo para el input del formulario */
+.login-form .form-input {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.login-form ion-item::part(native) {
+    padding-left: 0;
+}
+
+.login-form ion-icon {
+    position: absolute;
+    top: 15px;
+    z-index: 2;
+    font-size: 1.2rem;
+    left: 10px;
+}
+
+.login-form ion-label {
+    position: absolute;
+    margin-left: 35px;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    top: 3px;
+}
+
+.login-form ion-input {
+    font-size: 0.9rem;
+    --padding-start: 36px;
+    --padding-top: 36px;
+    color: #7b7b7b;
+}
+
+/* Estilo para el botón de acción */
+.action-button {
+    text-align: center;
+}
+
+/* Estilo para el botón de enviar */
+.action-button .forgot-password-button {
+    background: #f9b801;
+    width: 60%;
+    font-weight: bold;
+}
+
+/* Estilo para el texto dentro de la sección de acción */
+.action-button p {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #7b7b7b;
+}
+
+/* Estilo para la imagen animada */
+.imagen-animada {
+    position: fixed;
+    width: 30px; /* Tamaño de la imagen */
+    height: 30px;
+    bottom: 20px; /* Punto de inicio en la parte inferior */
+    left: 20px;
+    opacity: 1;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out; /* Transiciones para el movimiento y desvanecimiento */
+}
+
+.imagen-animada.move-and-fade {
+    transform: translate(200px, -200px); /* Movimiento diagonal de la imagen */
+    opacity: 0; /* Desvanecimiento */
+}
+.back-button {
+    color: #7b7b7b;
+}

@@ -1,13 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>escanner</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" id="main-content" >
+  <ion-img class="imagen2" *ngIf="pokemonImage" [src]="pokemonImage"></ion-img>
+  <div class="icon-container">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">escanner</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="home-section ion-padding ion-text-center">
+
+      <div class="segment" *ngIf="segment === 'scan'">
+
+        <div class="segment-content">
+
+          <img src="assets/imagen/scan-qr.png" alt="QR Code" width="150" height="150">
+          <!-- <h6 class="scan-label"> Escan QR</h6> -->
+
+          <ion-row class="ion-padding ion-text-center">
+            
+            <ion-col size="6">
+              <ion-button (click)="starScan()" class="submit" expand="block">
+                Escanear
+                <ion-icon slot="end" name="scan-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+
+            <ion-col size="6">
+              <ion-button (click)="presentAlert()" class="submit" expand="block">
+                Registrar
+                <ion-icon slot="end" name="scan-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+
+          </ion-row>
+          
+          <!-- resultado escan -->
+          <ion-item class="result" *ngIf="scanResult" lines="none">
+            <ion-label>
+              <p>Resultado del Escan</p>
+              <div>{{scanResult}}</div>
+            </ion-label>
+          </ion-item>  
+
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>
+<ion-footer>
+  <div class="action-button ion-padding">
+    <ion-button size="#" class="custom-medium-button" (click)="navigateHome()">Inicio</ion-button>
+  </div>
+</ion-footer>
